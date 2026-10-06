@@ -50,10 +50,10 @@ export function Faq() {
           <Accordion className="w-full">
             {faqs.map((faq, i) => (
               <AccordionItem key={i} value={`item-${i}`} className="border-border/50">
-                <AccordionTrigger className="text-left font-medium hover:text-primary transition-colors hover:no-underline text-foreground">
+                <AccordionTrigger className="text-left font-medium hover:text-primary transition-colors hover:no-underline text-foreground text-lg md:text-xl py-4">
                   {faq.q}
                 </AccordionTrigger>
-                <AccordionContent className="text-muted-foreground">
+                <AccordionContent className="text-muted-foreground text-base md:text-lg pb-4">
                   {faq.a}
                 </AccordionContent>
               </AccordionItem>
