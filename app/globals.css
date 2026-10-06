@@ -1,0 +1,136 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-sans);
+  --font-heading: var(--font-heading);
+  --font-mono: var(--font-mono);
+
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --color-status-transit: var(--status-transit);
+  --color-status-delivered: var(--status-delivered);
+  --color-status-exception: var(--status-exception);
+  --color-status-pending: var(--status-pending);
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+:root {
+  /* Cornerstone Design System - Trustrace Light Theme */
+  --background: #ffffff;
+  --foreground: #1e1e1e;
+
+  --card: #ffffff;
+  --card-foreground: #1e1e1e;
+
+  --popover: #ffffff;
+  --popover-foreground: #1e1e1e;
+
+  --primary: #e55c2e;
+  --primary-foreground: #ffffff;
+
+  --secondary: #faf9f6;
+  --secondary-foreground: #1e1e1e;
+
+  --muted: #f5f3f0;
+  --muted-foreground: #6b6b6b;
+
+  --accent: #fbe8e0;
+  --accent-foreground: #1e1e1e;
+
+  --destructive: #e5484d;
+  --destructive-foreground: #ffffff;
+
+  --border: #e7e6e6;
+  --input: #d9d7d3;
+  --ring: #e55c2e;
+
+  /* Semantic Status Colors */
+  --status-transit: #3b82f6;
+  --status-delivered: #10b981;
+  --status-exception: #eab308;
+  --status-pending: #71717a;
+
+  /* Border Radius System */
+  --radius: 10px;
+}
+
+/* Base styles */
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading tracking-tight;
+  }
+}
+
+/* Custom utilities */
+@layer utilities {
+  .text-shadow-glow {
+    text-shadow: 0 0 10px rgba(229, 92, 46, 0.5);
+  }
+
+  .glow-ring {
+    box-shadow: 0 0 0 1px var(--ring), 0 0 10px var(--ring);
+  }
+
+  .pattern-grid {
+    background-size: 40px 40px;
+    background-image: linear-gradient(to right, rgba(30, 30, 30, 0.04) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(30, 30, 30, 0.04) 1px, transparent 1px);
+  }
+
+  .pattern-grid-dark {
+    background-size: 40px 40px;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.08) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+  }
+
+  /* Signature Pattern Styles */
+  .csn-label {
+    @apply text-[10px] font-semibold uppercase tracking-[1.2px] text-muted-foreground;
+  }
+  .csn-value {
+    @apply text-sm font-medium text-foreground tabular-nums;
+  }
+  .csn-value-large {
+    @apply text-lg font-medium text-foreground tracking-tight;
+  }
+}
