@@ -89,7 +89,7 @@ export function Step2Service({ onNext, onBack }: { onNext: () => void; onBack: (
 
               <div className="flex flex-row sm:flex-col items-center sm:items-end justify-between w-full sm:w-auto mt-2 sm:mt-0 pt-4 sm:pt-0 border-t sm:border-t-0 border-white/10">
                 <div className="font-mono text-2xl font-semibold mb-2">${rate.price.toFixed(2)}</div>
-                <Button onClick={onNext} className="w-full sm:w-auto" variant={rate.recommended ? "default" : "secondary"}>
+                <Button onClick={onNext} variant={rate.recommended ? "default" : "secondary"}>
                   Select <ArrowRight className="h-4 w-4 ml-2" />
                 </Button>
               </div>

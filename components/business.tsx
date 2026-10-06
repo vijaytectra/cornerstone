@@ -6,7 +6,7 @@ import { motion } from "motion/react";
 
 export function Business() {
   return (
-    <section id="business" className="py-6 md:py-12 border-b border-border bg-[#faf9f6]">
+    <section id="business" className="py-10 md:py-16 border-b border-border bg-[#faf9f6]">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="bg-white border border-border rounded-2xl p-6 md:p-12 lg:p-16 flex flex-col lg:flex-row items-center gap-12">
           <motion.div
