@@ -15,7 +15,7 @@ export function WhyCornerstone() {
   ];
 
   return (
-    <section className="py-10 md:py-16 border-b border-border bg-background">
+    <section className="py-6 md:py-12 border-b border-border bg-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col lg:flex-row gap-8 lg:gap-16 items-center">
           <motion.div

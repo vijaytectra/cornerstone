@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Box, Menu, X } from "lucide-react";
+import Image from "next/image";
 import { useEffect, useState } from "react";
 
 export function Navbar() {
@@ -20,25 +21,26 @@ export function Navbar() {
     ? "text-black hover:text-black/80"
     : "text-white/80 hover:text-white";
 
+  const isSolid = scrolled || isOpen;
+
   return (
     <header
       className={`fixed inset-x-0 top-0 z-50 w-full transition-colors duration-300 ${
-        scrolled
+        isSolid
           ? "border-b border-border bg-background/90 backdrop-blur supports-[backdrop-filter]:bg-background/70"
           : "border-b border-transparent bg-transparent"
       }`}
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex h-20 items-center justify-between">
-        <div className="flex items-center gap-2">
-          <Box className={`h-6 w-6 ${scrolled ? "text-primary" : "text-white"}`} />
-          <span
-            className={`font-heading font-bold tracking-tight text-xl ${
-              scrolled ? "text-white lg:text-foreground" : "text-white"
-            }`}
-          >
-            CORNERSTONE
-          </span>
-        </div>
+        <Link href="/" className="flex items-center">
+          <div className="relative h-10 w-[200px] md:h-12 md:w-[260px] lg:h-20 lg:w-[400px]">
+            {isSolid ? (
+              <Image src="/black-cs.png" alt="Cornerstone" fill className="object-contain object-left" />
+            ) : (
+              <Image src="/white-cs.png" alt="Cornerstone" fill className="object-contain object-left" />
+            )}
+          </div>
+        </Link>
 
         {/* Desktop Navigation */}
         <nav className="hidden lg:flex items-center gap-8">
@@ -53,6 +55,9 @@ export function Navbar() {
           </Link>
           <Link href="#business" className={`text-sm font-medium transition-colors ${linkTone}`}>
             Business API
+          </Link>
+          <Link href="/ship" className={`text-sm font-medium transition-colors ${linkTone}`}>
+            Package Service
           </Link>
         </nav>
 
@@ -71,7 +76,7 @@ export function Navbar() {
         {/* Mobile menu toggle */}
         <button
           className={`lg:hidden p-2 transition-colors ${
-            scrolled ? "text-white lg:text-foreground" : "text-white"
+            isSolid ? "text-foreground" : "text-white"
           }`}
           onClick={() => setIsOpen(!isOpen)}
         >
@@ -103,6 +108,7 @@ export function Navbar() {
           <Link href="#tracking" className="block text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">Tracking</Link>
           <Link href="#services" className="block text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">Services</Link>
           <Link href="#business" className="block text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">Business API</Link>
+          <Link href="/ship" className="block text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">Package Service</Link>
           <div className="pt-4 border-t border-border flex flex-col gap-2">
             <Link href="/login" className="block text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">Sign In</Link>
             <Button variant="default" className="w-full font-medium">Track Shipment</Button>

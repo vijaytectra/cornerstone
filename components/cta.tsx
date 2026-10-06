@@ -6,13 +6,13 @@ import { motion } from "motion/react";
 
 export function Cta() {
   return (
-    <section className="py-10 md:py-16 bg-background">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="pt-2 pb-6 md:pt-4 md:pb-12 bg-background">
+      <div className="w-full">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="bg-[#1e1e1e] rounded-3xl px-4 py-12 md:px-6 md:py-24 text-center relative overflow-hidden"
+          className="bg-[#1e1e1e] px-4 py-12 md:px-6 md:py-24 text-center relative overflow-hidden"
         >
           <motion.div
             initial={{ opacity: 0 }}

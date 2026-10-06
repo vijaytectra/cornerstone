@@ -16,7 +16,7 @@ export function Routes() {
   ];
 
   return (
-    <section id="routes" className="py-10 md:py-16 border-b border-border bg-background">
+    <section id="routes" className="py-6 md:py-12 border-b border-border bg-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-end mb-8 md:mb-16">
           <motion.div
@@ -65,17 +65,15 @@ export function Routes() {
                 className="absolute inset-0 pointer-events-none transition-colors duration-300"
               />
 
-              <div className="absolute top-7 right-7">
-                {route.active && <span className="w-2 h-2 rounded-full bg-status-transit animate-pulse inline-block" title="Route Active" />}
-              </div>
+              {/* Removed absolute dot, moved into the flex header below */}
 
               <div className="flex items-start justify-between mb-8 relative z-10">
-                <div className="flex items-start gap-4">
+                <div className="flex items-start gap-4 pr-4">
                   <div className="shrink-0 w-12 h-12 rounded-full bg-primary/10 text-primary text-base font-bold flex items-center justify-center border border-primary/20">
                     0{i + 1}
                   </div>
                   <div className="flex flex-col pt-1">
-                    <h3 className="text-xl md:text-2xl font-heading font-medium text-foreground flex items-center gap-3">
+                    <h3 className="text-xl md:text-2xl font-heading font-medium text-foreground flex items-center flex-wrap gap-x-3 gap-y-1">
                       {route.from} 
                       <motion.div animate={{ x: hoveredRoute === i ? 5 : 0 }}>
                         <ArrowRight className="h-5 w-5 text-muted-foreground/50" />
@@ -99,7 +97,7 @@ export function Routes() {
                     {route.mode}
                   </span>
                 </div>
-                <div className="flex flex-col text-left items-start">
+                <div className="flex flex-col text-right items-end">
                   <span className="text-[10px] uppercase tracking-widest text-muted-foreground font-semibold mb-1">Transit</span>
                   <span className="text-sm font-medium text-foreground">{route.time}</span>
                 </div>
