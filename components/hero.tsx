@@ -113,7 +113,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.4 }}
-          className="mt-12 md:mt-16 grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 lg:gap-16 text-left border-t border-white/15 pt-8"
+          className="mt-20 md:mt-32 grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 lg:gap-16 text-left border-t border-white/15 pt-8"
         >
           <div>
             <span className="text-[10px] font-semibold uppercase tracking-[1.2px] text-white/50 block mb-1">ACTIVE ROUTES</span>

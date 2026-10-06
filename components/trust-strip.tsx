@@ -40,7 +40,7 @@ export function TrustStrip() {
             <motion.div
               animate={{ x: ["0%", "-50%"] }}
               transition={{ repeat: Infinity, ease: "linear", duration: 40 }}
-              className="flex items-center w-max opacity-40 hover:opacity-100 transition-opacity duration-700"
+              className="flex items-center w-max opacity-100"
             >
               {logoGroup}
               {logoGroup}
