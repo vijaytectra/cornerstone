@@ -15,9 +15,9 @@ export function WhyCornerstone() {
   ];
 
   return (
-    <section className="py-24 md:py-32 border-b border-border bg-background">
+    <section className="py-10 md:py-16 border-b border-border bg-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col lg:flex-row gap-16 items-center">
+        <div className="flex flex-col lg:flex-row gap-8 lg:gap-16 items-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -63,26 +63,26 @@ export function WhyCornerstone() {
               <div className="absolute inset-0 bg-gradient-to-t from-background/40 to-transparent z-10" />
 
               {/* Mockup Data Grid */}
-              <div className="relative z-20 space-y-4 bg-background/80 backdrop-blur-md p-6 rounded-xl border border-border shadow-sm">
-                <div className="flex justify-between border-b border-border pb-2">
-                  <span className="csn-label">METRIC</span>
-                  <span className="csn-label">INDUSTRY</span>
-                  <span className="csn-label text-primary">CORNERSTONE</span>
+              <div className="relative z-20 space-y-4 bg-background/80 backdrop-blur-md p-4 sm:p-6 rounded-xl border border-border shadow-sm">
+                <div className="grid grid-cols-3 gap-2 sm:gap-4 border-b border-border pb-2">
+                  <span className="csn-label text-left">METRIC</span>
+                  <span className="csn-label text-left">INDUSTRY</span>
+                  <span className="csn-label text-primary text-left">CORNERSTONE</span>
                 </div>
-                <div className="flex justify-between items-center group">
-                  <span className="text-sm text-foreground font-medium transition-colors">Clearance Time</span>
-                  <span className="text-sm font-mono text-foreground">24-48 hrs</span>
-                  <span className="text-sm font-mono text-foreground font-semibold">&lt; 4 hrs</span>
+                <div className="grid grid-cols-3 gap-2 sm:gap-4 items-center group">
+                  <span className="text-xs sm:text-sm text-foreground font-medium transition-colors text-left">Clearance Time</span>
+                  <span className="text-xs sm:text-sm font-mono text-foreground text-left">24-48 hrs</span>
+                  <span className="text-xs sm:text-sm font-mono text-foreground font-semibold text-left">&lt; 4 hrs</span>
                 </div>
-                <div className="flex justify-between items-center group">
-                  <span className="text-sm text-foreground font-medium transition-colors">Data Latency</span>
-                  <span className="text-sm font-mono text-foreground">Batched (Daily)</span>
-                  <span className="text-sm font-mono text-foreground font-semibold text-primary">Real-time (API)</span>
+                <div className="grid grid-cols-3 gap-2 sm:gap-4 items-center group">
+                  <span className="text-xs sm:text-sm text-foreground font-medium transition-colors text-left">Data Latency</span>
+                  <span className="text-xs sm:text-sm font-mono text-foreground text-left leading-tight">Batched<br className="sm:hidden" /> (Daily)</span>
+                  <span className="text-xs sm:text-sm font-mono text-foreground font-semibold text-primary text-left leading-tight">Real-time<br className="sm:hidden" /> (API)</span>
                 </div>
-                <div className="flex justify-between items-center group">
-                  <span className="text-sm text-foreground font-medium transition-colors">Loss Rate</span>
-                  <span className="text-sm font-mono text-foreground">1.2%</span>
-                  <span className="text-sm font-mono text-foreground font-semibold">0.01%</span>
+                <div className="grid grid-cols-3 gap-2 sm:gap-4 items-center group">
+                  <span className="text-xs sm:text-sm text-foreground font-medium transition-colors text-left">Loss Rate</span>
+                  <span className="text-xs sm:text-sm font-mono text-foreground text-left">1.2%</span>
+                  <span className="text-xs sm:text-sm font-mono text-foreground font-semibold text-left">0.01%</span>
                 </div>
               </div>
             </div>

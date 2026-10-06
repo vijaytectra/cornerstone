@@ -33,7 +33,7 @@ export function Navbar() {
           <Box className={`h-6 w-6 ${scrolled ? "text-primary" : "text-white"}`} />
           <span
             className={`font-heading font-bold tracking-tight text-xl ${
-              scrolled ? "text-foreground" : "text-white"
+              scrolled ? "text-white lg:text-foreground" : "text-white"
             }`}
           >
             CORNERSTONE
@@ -71,7 +71,7 @@ export function Navbar() {
         {/* Mobile menu toggle */}
         <button
           className={`lg:hidden p-2 transition-colors ${
-            scrolled ? "text-foreground" : "text-white"
+            scrolled ? "text-white lg:text-foreground" : "text-white"
           }`}
           onClick={() => setIsOpen(!isOpen)}
         >

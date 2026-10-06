@@ -27,9 +27,9 @@ export function Services() {
   ];
 
   return (
-    <section id="services" className="py-24 md:py-32 border-b border-border bg-background">
+    <section id="services" className="py-10 md:py-16 border-b border-border bg-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col lg:flex-row gap-12 lg:gap-24">
+        <div className="flex flex-col lg:flex-row gap-8 lg:gap-24">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -43,7 +43,7 @@ export function Services() {
             <p className="text-muted-foreground mb-8 lg:mb-12">
               We specialize in complex, high-stakes parcel delivery where failure is not an option. Our service architecture is designed around predictability.
             </p>
-            <div className="relative w-full aspect-video rounded-2xl overflow-hidden mt-8 hidden sm:block lg:mt-0">
+            <div className="relative w-full aspect-video rounded-2xl overflow-hidden mt-6 lg:mt-0">
               <Image 
                 src="/modern-cargo-logistics.jpg" 
                 alt="Air Cargo Loading"

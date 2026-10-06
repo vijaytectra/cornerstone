@@ -48,7 +48,7 @@ export function Hero() {
       <div className="absolute inset-0 z-0 bg-gradient-to-r from-[#0b1d29] via-[#0b1d29]/70 to-transparent" />
       <div className="absolute inset-0 z-0 bg-gradient-to-t from-[#0b1d29] via-transparent to-[#0b1d29]/50" />
 
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pt-32 pb-16 md:pt-36 md:pb-20">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pt-28 pb-10 md:pt-32 md:pb-16">
         <div className="grid grid-cols-1 lg:grid-cols-[5fr_6fr] gap-x-16 gap-y-10 items-center">
 
           <motion.div

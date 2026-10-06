@@ -16,9 +16,9 @@ export function Routes() {
   ];
 
   return (
-    <section id="routes" className="pt-12 pb-24 md:pt-16 md:pb-32 border-b border-border bg-background">
+    <section id="routes" className="py-10 md:py-16 border-b border-border bg-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col lg:flex-row gap-12 items-end mb-12 md:mb-16">
+        <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-end mb-8 md:mb-16">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -37,7 +37,7 @@ export function Routes() {
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            className="lg:w-1/2 w-full h-64 md:h-80 relative rounded-2xl overflow-hidden border border-border hidden sm:block"
+            className="lg:w-1/2 w-full h-64 md:h-80 relative rounded-2xl overflow-hidden border border-border"
           >
             <Image 
               src="/new-routes-map.jpg" 
@@ -87,19 +87,19 @@ export function Routes() {
               </div>
 
               <div className="grid grid-cols-3 gap-4 bg-muted/30 p-4 rounded-xl border border-border/50 relative z-10">
-                <div className="flex flex-col">
+                <div className="flex flex-col text-left items-start">
                   <span className="text-[10px] uppercase tracking-widest text-muted-foreground font-semibold mb-1">Route ID</span>
                   <span className="font-mono text-sm text-foreground font-medium">{route.code}</span>
                 </div>
-                <div className="flex flex-col">
+                <div className="flex flex-col text-left items-start">
                   <span className="text-[10px] uppercase tracking-widest text-muted-foreground font-semibold mb-1">Mode</span>
-                  <span className="text-sm font-medium text-foreground flex items-center gap-1.5">
+                  <span className="text-sm font-medium text-foreground flex items-center justify-start gap-1.5">
                     {route.mode.includes("AIR") && <Plane className="h-3.5 w-3.5 text-primary" />}
                     {route.mode.includes("SEA") && <Ship className="h-3.5 w-3.5 text-primary" />}
                     {route.mode}
                   </span>
                 </div>
-                <div className="flex flex-col">
+                <div className="flex flex-col text-left items-start">
                   <span className="text-[10px] uppercase tracking-widest text-muted-foreground font-semibold mb-1">Transit</span>
                   <span className="text-sm font-medium text-foreground">{route.time}</span>
                 </div>

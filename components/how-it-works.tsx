@@ -12,13 +12,13 @@ export function HowItWorks() {
   ];
 
   return (
-    <section className="py-24 md:py-32 border-b border-border bg-background">
+    <section className="py-10 md:py-16 border-b border-border bg-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mb-16"
+          className="mb-8 md:mb-16"
         >
           <span className="csn-label text-primary mb-4 block">THE PROTOCOL</span>
           <h2 className="text-3xl md:text-4xl lg:text-[48px] font-heading font-normal tracking-tight leading-[1.05]">
