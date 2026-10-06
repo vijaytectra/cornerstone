@@ -29,7 +29,7 @@ export function Faq() {
   ];
 
   return (
-    <section className="py-6 md:py-12 border-b border-border/40 bg-background">
+    <section className="py-10 md:py-16 border-b border-border/40 bg-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
