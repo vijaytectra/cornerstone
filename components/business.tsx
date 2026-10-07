@@ -4,6 +4,9 @@ import { Button } from "@/components/ui/button";
 import { Terminal } from "lucide-react";
 import { motion } from "motion/react";
 
+
+
+
 export function Business() {
   return (
     <section id="business" className="py-10 md:py-16 border-b border-border bg-[#faf9f6]">
