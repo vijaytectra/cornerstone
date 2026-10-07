@@ -75,7 +75,7 @@ export function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="text-lg md:text-xl text-white/90 leading-relaxed mb-10"
+              className="max-w-2xl text-lg md:text-xl text-white/90 leading-relaxed mb-10"
             >
               Precision cross-border parcel delivery operating across primary
               corridors: India, Canada, Australia, and the USA. Real-time data,

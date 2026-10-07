@@ -9,24 +9,24 @@ export function Routes() {
   const [hoveredRoute, setHoveredRoute] = useState<number | null>(null);
 
   const corridors = [
-    { from: "INDIA", to: "CANADA", code: "IN → CA", mode: "AIR / SEA", time: "48-72h", active: true, desc: "Direct daily flights via LHR layover. Priority clearance at YYZ." },
-    { from: "CANADA", to: "AUSTRALIA", code: "CA → AU", mode: "AIR", time: "72-96h", active: true, desc: "Trans-pacific direct allocations. Advanced biometric security scanning." },
-    { from: "AUSTRALIA", to: "USA", code: "AU → US", mode: "AIR / SEA", time: "48-72h", active: true, desc: "High-volume cargo corridor. Next-day injection into domestic USPS grid." },
-    { from: "AUSTRALIA", to: "INDIA", code: "AU → IN", mode: "AIR", time: "48-72h", active: true, desc: "Express pharmaceutical and high-value tech lanes. Pre-cleared in BOM." },
+    { from: "India", to: "Canada", code: "IN → CA", mode: "AIR / SEA", time: "48-72h", active: true, desc: "Direct daily flights via LHR layover. Priority clearance at YYZ." },
+    { from: "Canada", to: "Australia", code: "CA → AU", mode: "AIR", time: "72-96h", active: true, desc: "Trans-pacific direct allocations. Advanced biometric security scanning." },
+    { from: "Australia", to: "USA", code: "AU → US", mode: "AIR / SEA", time: "48-72h", active: true, desc: "High-volume cargo corridor. Next-day injection into domestic USPS grid." },
+    { from: "Australia", to: "India", code: "AU → IN", mode: "AIR", time: "48-72h", active: true, desc: "Express pharmaceutical and high-value tech lanes. Pre-cleared in BOM." },
   ];
 
   return (
     <section id="routes" className="py-10 md:py-16 border-b border-border bg-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-end mb-8 md:mb-16">
+        <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-start mb-8 md:mb-16">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="lg:w-1/2 max-w-2xl"
           >
-            <span className="csn-label mb-4 text-primary">PRIMARY CORRIDORS</span>
-            <h2 className="text-3xl md:text-5xl lg:text-[56px] font-heading font-normal tracking-tight leading-[1.05] text-foreground mb-6">
+            <span className="csn-label mb-4 block text-primary">PRIMARY CORRIDORS</span>
+            <h2 className="text-[14px] md:text-[32px] lg:text-[40px] font-heading font-normal tracking-tight leading-[1.05] text-foreground mb-6">
               Optimized intercontinental routing.
             </h2>
             <p className="text-lg text-muted-foreground">
