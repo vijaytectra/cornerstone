@@ -13,9 +13,6 @@ export function Footer() {
                 <Image src="/black-cs.png" alt="Cornerstone" fill className="object-contain object-left" />
               </div>
             </Link>
-            <p className="text-muted-foreground text-sm max-w-sm mb-6">
-              Premium cross-border logistics platform. Global operations control center for high-value parcel delivery.
-            </p>
             <div className="flex gap-4">
               <div className="flex items-center gap-2">
                 <span className="w-2 h-2 rounded-full bg-status-transit animate-pulse" />
